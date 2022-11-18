@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from tasks import spiral, random_led, top_down, sides
+import uvicorn
 
 
 
@@ -31,4 +32,8 @@ async def tree(item: Item):
             sides.delay(True)
         else:
             sides.delay(False)
+    else:
+        return 'No name recognized'            
     return item
+if __name__ == '__main__':
+    uvicorn.run(app, port=8000, host='*')    
