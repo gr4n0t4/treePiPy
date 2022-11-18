@@ -1,4 +1,4 @@
-from gpiozero import LEDBoard, PWMLED, Button
+from gpiozero import LEDBoard, PWMLED
 from gpiozero.tools import random_values
 from random import *
 import time
