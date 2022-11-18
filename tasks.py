@@ -4,7 +4,7 @@ from random import *
 import time
 from celery import Celery
 
-app = Celery()
+app = Celery("tasks")
 
 
 # set up various delay values
